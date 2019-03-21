@@ -15,7 +15,6 @@ namespace BinaryCalculator
             int soldiersCount = 10;
             var controller = new Controller(lengthOfWay, soldiersCount );
             controller.CalculateVariants();
-
         }
     }
 }
