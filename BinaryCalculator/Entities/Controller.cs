@@ -43,7 +43,7 @@ namespace BinaryCalculator.Entities
         {
             this.lengthOfWay = lengthOfWay;
             this.soldiersCount = soldiersCount;
-            board = new Board(soldiersCount, lengthOfWay);
+            board = new Board(lengthOfWay,soldiersCount);
         }
 
         //print result
@@ -73,12 +73,13 @@ namespace BinaryCalculator.Entities
         {
             board.Go();
             var results = board.Positions;
-            Console.WriteLine($"board len: {lengthOfWay}, soldiers: {soldiersCount}, total vaiants: {results.Count}");
+            Console.WriteLine($"board len: {lengthOfWay}, soldiers: {soldiersCount}, total variants: {results.Count}");
             foreach (var item in results)
             {
                 printResult(item);
             }
-            Console.ReadKey();
+            Console.WriteLine($"board len: {lengthOfWay}, soldiers: {soldiersCount}, total variants: {results.Count}");
+            Console.ReadLine();
         }
 
         
